@@ -1,0 +1,1 @@
+C:\Users\mates\RiderProjects\project\src\ICS.App\ICS.App.csproj;x64

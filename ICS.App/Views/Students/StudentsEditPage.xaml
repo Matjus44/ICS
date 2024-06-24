@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="using:ICS.App.Views"
+             xmlns:students="clr-namespace:ICS.App.ViewModels.Students"
+             x:Class="ICS.App.Views.Students.StudentsEditPage"
+             x:DataType="students:StudentsViewEditModel">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Padding="30" Spacing="20">
+                <Label Text="Edit Student Information" FontSize="Large" HorizontalOptions="Center" />
+
+                <Label Text="First Name" />
+                <Entry Text="{Binding FirstName, Mode=TwoWay}" Placeholder="Enter first name" />
+
+                <Label Text="Last Name" />
+                <Entry Text="{Binding LastName, Mode=TwoWay}" Placeholder="Enter last name" />
+
+                <Label Text="Profile Picture URI" />
+                <Entry Text="{Binding PhotoUri, Mode=TwoWay}" Placeholder="Enter photo URI" />
+
+                <Button Text="Save" Clicked="SaveStudentAsync" Margin="10"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</views:ContentPageBase>

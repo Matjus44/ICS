@@ -1,0 +1,20 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9e9a00db_002D4197_002D47d7_002D8af7_002D51eab84fa6e0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetById_FromSeeded_EqualsSeeded" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::29F864BB-B0CB-4E24-9DB2-F1B474A266B0::net8.0::ICS.BL.Tests.SubjectFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::29F864BB-B0CB-4E24-9DB2-F1B474A266B0::net8.0::ICS.BL.Tests.StudentFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::62E1D9E8-CAC8-4FFA-AF53-9ACDB1268A1F::net8.0::ICS.DAL.Tests.DbContextActivityTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::62E1D9E8-CAC8-4FFA-AF53-9ACDB1268A1F::net8.0::ICS.DAL.Tests.DbContextRatingTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::62E1D9E8-CAC8-4FFA-AF53-9ACDB1268A1F::net8.0::ICS.DAL.Tests.DbContextStudentTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::62E1D9E8-CAC8-4FFA-AF53-9ACDB1268A1F::net8.0::ICS.DAL.Tests.DbContextSubjectTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aae796fd_002D2733_002D4d61_002D9475_002Dbf427f12ba6a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetById_IncludingActivities_Subject" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::62E1D9E8-CAC8-4FFA-AF53-9ACDB1268A1F::net8.0::ICS.DAL.Tests.DbContextSubjectTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::62E1D9E8-CAC8-4FFA-AF53-9ACDB1268A1F::net8.0::ICS.DAL.Tests.DbContextActivityTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::62E1D9E8-CAC8-4FFA-AF53-9ACDB1268A1F::net8.0::ICS.DAL.Tests.DbContextRatingTests.CanAddNewRatingToExistingActivity&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::29F864BB-B0CB-4E24-9DB2-F1B474A266B0::net8.0::ICS.BL.Tests.SubjectFacadeTests.GetById_FromSeeded_EqualsSeeded&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::29F864BB-B0CB-4E24-9DB2-F1B474A266B0::net8.0::ICS.BL.Tests.SubjectFacadeTests.GetAll_FromSeeded_ContainsSeeded&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

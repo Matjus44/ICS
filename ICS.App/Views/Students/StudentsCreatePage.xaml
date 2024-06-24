@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:views="using:ICS.App.Views"
+                       xmlns:students="clr-namespace:ICS.App.ViewModels.Students"
+                       x:Class="ICS.App.Views.Students.StudentsCreatePage"
+                       x:DataType="students:StudentsViewCreateModel">
+    <ContentPage.Content>
+        <Grid Padding="10" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Text="First Name" VerticalOptions="Center"/>
+            <Entry Grid.Row="1" Margin="10" Text="{Binding FirstName, Mode=TwoWay}" Placeholder="Enter first name"/>
+
+            <Label Grid.Row="2" Text="Last Name" VerticalOptions="Center"/>
+            <Entry Grid.Row="3" Margin="10" Text="{Binding LastName, Mode=TwoWay}" Placeholder="Enter last name"/>
+
+            <Label Grid.Row="4" Text="Profile Picture URI" VerticalOptions="Center"/>
+            <Entry Grid.Row="5" Margin="10" Text="{Binding PhotoUri, Mode=TwoWay}" Placeholder="Enter profile picture URI"/>
+
+            <Button Grid.Row="6"
+                    Text="Save Student"
+                    Clicked="SaveStudentClicked"
+                    VerticalOptions="End"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,10,0,0"/>
+        </Grid>
+    </ContentPage.Content>
+</views:ContentPageBase>

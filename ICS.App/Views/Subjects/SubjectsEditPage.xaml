@@ -1,0 +1,115 @@
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:views="using:ICS.App.Views"
+                       xmlns:models="clr-namespace:ICS.BL.Models;assembly=ICS.BL"
+                       xmlns:edit="using:ICS.App.ViewModels.Subjects"
+                       x:DataType="edit:SubjectsEditDetailModel"
+                       x:Class="ICS.App.Views.Subjects.SubjectsEditPage">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Subject Entries with labels -->
+            <Grid Grid.Row="0" ColumnDefinitions="2*, 2*, 1*">  
+                <StackLayout Grid.Column="0" Margin="10">
+                    <Label Text="Subject name" FontAttributes="Bold"/>
+                    <Entry Placeholder="Enter subject name" Text="{Binding Subject.Name, Mode=TwoWay}"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Margin="10">
+                    <Label Text="Subject codename" FontAttributes="Bold"/>
+                    <Entry Placeholder="Enter Subject codename" Text="{Binding Subject.CodeName, Mode=TwoWay}"/>
+                </StackLayout>
+                
+                <Button Grid.Column="2" Text="Save" Clicked="OnSaveClicked" Margin="10,30,10,10" VerticalOptions="Start"/>
+            </Grid>
+
+
+            <!-- Students and Student Registration -->
+            <Grid Grid.Row="1" ColumnDefinitions="3*, 2*">
+                <StackLayout Grid.Column="0" Margin="10">
+                    <Label Text="Registered Students" FontAttributes="Bold" FontSize="Medium"/>
+                    <BoxView HeightRequest="2" Color="Gray" HorizontalOptions="FillAndExpand"/>
+                    <ListView ItemsSource="{Binding SubjectsStudents}" ItemTapped="OnStudentSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="models:StudentDetailModel">
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Label Text="{Binding FirstName}"/>
+                                        <Label Text="{Binding LastName}"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Button Text="Unregister Student" Clicked="OnUnregisterStudentClicked" IsVisible="{Binding UnregisterButtonVisible}" WidthRequest="160" HeightRequest="40"/>
+                </StackLayout>
+                <!-- All Students -->
+                <StackLayout Grid.Column="1" Margin="10">
+                    <Label Text="All Students" FontAttributes="Bold" FontSize="Medium"/>
+                    <BoxView HeightRequest="2" Color="Gray" HorizontalOptions="FillAndExpand"/>
+                    <ListView ItemsSource="{Binding AllStudents}" ItemTapped="OnStudentToRegisterSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="models:StudentListModel">
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Label Text="{Binding FirstName}"/>
+                                        <Label Text="{Binding LastName}"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Button Text="Register Student" Clicked="OnRegisterStudentClicked" IsVisible="{Binding RegisterButtonVisible}" WidthRequest="160" HeightRequest="40"/>
+                </StackLayout>
+            </Grid>
+
+            <!-- Activities and Activity Management -->
+            <Grid Grid.Row="3" ColumnDefinitions="3*, 2*">
+                <StackLayout Grid.Column="0" Margin="10">
+                    <Label Text="Registered Activities" FontAttributes="Bold" FontSize="Medium"/>
+                    <BoxView HeightRequest="2" Color="Gray" HorizontalOptions="FillAndExpand"/>
+                    <ListView ItemsSource="{Binding SubjectsActivities}" ItemTapped="OnActivitySelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="models:ActivityListModel">
+                                <ViewCell>
+                                    <Label Text="{Binding ActivityDescription}"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Grid ColumnDefinitions="*, *">
+                        <Button Grid.Column="0" Text="Delete Activity" Clicked="OnDeleteActivityClicked" IsVisible="{Binding DeleteActivityButtonVisible}" WidthRequest="160" HeightRequest="40" VerticalOptions="End"/>
+                        <Button Grid.Column="1" Text="Edit Activity" Clicked="OnEditActivityClicked" IsVisible="{Binding DeleteActivityButtonVisible}" WidthRequest="160" HeightRequest="40" VerticalOptions="End"/>
+                    </Grid>
+                </StackLayout>
+                <!-- New Activity -->
+                <StackLayout Grid.Column="1" Margin="10">
+                    <Label Text="New Activity" FontAttributes="Bold" FontSize="Medium" Margin="5"/>
+                    <BoxView HeightRequest="2" Color="Gray" HorizontalOptions="FillAndExpand"/>
+                    <Entry Placeholder="Activity Time Start" Text="{Binding NewActivityTime, Mode=TwoWay}" Margin="5"/>
+                    <Entry Placeholder="Activity Time End" Text="{Binding NewActivityEndTime, Mode=TwoWay}" Margin="5"/>
+                    <Entry Placeholder="Activity Room" Text="{Binding NewActivityRoomName, Mode=TwoWay}" Margin="5"/>
+                    <Picker Title="Activity Type" SelectedItem="{Binding NewActivityType}" Margin="5">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Exam</x:String>
+                                <x:String>Lecture</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Entry Placeholder="Activity Description" Text="{Binding NewActivityDescription, Mode=TwoWay}" Margin="5"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10, 20, 10, 10">
+                        <Button Text="Add Activity" Clicked="OnAddActivityClicked" WidthRequest="140" HeightRequest="40" Margin="10"/>
+                        <Button Text="Save Activity" Clicked="OnSaveActivityClicked" WidthRequest="140" HeightRequest="40" Margin="10"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</views:ContentPageBase>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Shell
+    x:Class="ICS.App.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ICS.App"
+    xmlns:p="clr-namespace:ICS.App.Views.Profile"
+    xmlns:e="clr-namespace:ICS.App.Views.Activities"
+    xmlns:sch="clr-namespace:ICS.App.Views.Schedule"
+    xmlns:sub="clr-namespace:ICS.App.Views.Subjects"
+    xmlns:stud="using:ICS.App.Views.Students"
+    FlyoutBehavior="Disabled"
+    NavBarIsVisible="False"
+    Title="ICS project">
+
+    <TabBar>
+        <Tab Title="Subjects">
+            <ShellContent ContentTemplate="{DataTemplate sub:SubjectsPage}" Route="subjects" />
+        </Tab>
+        <Tab Title="Schedule">
+            <ShellContent ContentTemplate="{DataTemplate sch:SchedulePage}" Route="schedule" />
+        </Tab>
+        <Tab Title="Activities">
+            <ShellContent ContentTemplate="{DataTemplate e:ActivitiesPage}" Route="exams" />
+        </Tab>
+        <Tab Title="Students">
+            <ShellContent ContentTemplate="{DataTemplate stud:StudentsListPage}" Route="studentsList"/>
+        </Tab>
+    </TabBar>
+</Shell>

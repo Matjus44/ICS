@@ -1,0 +1,13 @@
+C:\Users\mates\RiderProjects\project\src\ICS.Common\bin\Debug\net8.0\ICS.Common.deps.json
+C:\Users\mates\RiderProjects\project\src\ICS.Common\bin\Debug\net8.0\ICS.Common.dll
+C:\Users\mates\RiderProjects\project\src\ICS.Common\bin\Debug\net8.0\ICS.Common.pdb
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\ICS.Common.csproj.AssemblyReference.cache
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\ICS.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\ICS.Common.AssemblyInfoInputs.cache
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\ICS.Common.AssemblyInfo.cs
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\ICS.Common.csproj.CoreCompileInputs.cache
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\ICS.Common.sourcelink.json
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\ICS.Common.dll
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\refint\ICS.Common.dll
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\ICS.Common.pdb
+C:\Users\mates\RiderProjects\project\src\ICS.Common\obj\Debug\net8.0\ref\ICS.Common.dll

@@ -1,0 +1,133 @@
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:views="using:ICS.App.Views"
+                       xmlns:models="clr-namespace:ICS.BL.Models;assembly=ICS.BL"
+                       xmlns:activities="using:ICS.App.ViewModels.Activities"
+                       xmlns:enums="using:ICS.Common.Enums"
+                       x:DataType="activities:ActivitiesViewModel"
+                       x:Class="ICS.App.Views.Activities.ActivitiesPage"
+                       Title="Activities">
+
+    <Grid RowDefinitions="Auto, *, Auto, *" ColumnDefinitions="*, *">
+        <!-- Top row for subjects -->
+        <StackLayout Grid.Row="0" Grid.Column="0" Padding="10">
+            <Label Text="Subjects" FontAttributes="Bold" FontSize="18"/>
+            <BoxView Color="DimGrey" HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,10"/>
+            <ListView ItemsSource="{Binding Subjects}" ItemTapped="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:SubjectListModel">
+                        <ViewCell>
+                            <Label Text="{Binding Name}" Padding="5"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+        <!-- Top row second column for activities -->
+        <StackLayout Grid.Row="0" Grid.Column="1" Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>  <!-- Row for Label and Picker -->
+                    <RowDefinition Height="2"/>    <!-- Row for BoxView -->
+                    <RowDefinition Height="*"/>    <!-- Row for ListView -->
+                </Grid.RowDefinitions>
+
+                <HorizontalStackLayout Grid.Row="0" VerticalOptions="Center" Spacing="10">
+                    <Label Text="Activities" FontAttributes="Bold" FontSize="18"/>
+                    <Picker WidthRequest="120"
+                            SelectedIndexChanged="OnSortActivityChanged"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Ascending</x:String>
+                                <x:String>Descending</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </HorizontalStackLayout>
+
+                <BoxView Grid.Row="1" Color="DimGrey" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
+
+                <ListView Grid.Row="2" ItemsSource="{Binding Activities}" ItemTapped="OnActivitySelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:ActivityDetailModel">
+                            <ViewCell>
+                                <Label Text="{Binding ActivityDescription}" Padding="5"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </StackLayout>
+
+        <!-- Second row for students -->
+        <StackLayout Grid.Row="1" Padding="10">
+            <Label Text="Students" FontAttributes="Bold" FontSize="18"/>
+            <BoxView Color="DimGrey" HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,10"/>
+            <ListView ItemsSource="{Binding Students}" ItemTapped="OnStudentSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:StudentDetailModel">
+                        <ViewCell>
+                            <HorizontalStackLayout Spacing="5" Padding="5">
+                                <Label Text="{Binding FirstName}" LineBreakMode="TailTruncation"/>
+                                <Label Text="{Binding LastName}" LineBreakMode="TailTruncation"/>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <!-- Third row for ratings title -->
+        <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Padding="10">
+    <!-- Header layout with picker for sorting ratings -->
+    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+        <Label Text="{Binding SelectedSubject.Name, StringFormat='Ratings in subject: {0}'}" 
+               FontAttributes="Bold" 
+               FontSize="Medium" 
+               VerticalOptions="Center"/>
+        <Picker 
+                SelectedIndexChanged="OnSortRatingChanged"
+                WidthRequest="160"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                Margin="10,0,0,0">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Lowest First</x:String>
+                    <x:String>Highest First</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+    </StackLayout>
+
+    <!-- ListView for displaying ratings -->
+    <ListView ItemsSource="{Binding Ratings}" ItemTapped="OnRatingClicked">
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="models:RatingDetailModel">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="5">
+                        <Label Text="{Binding Note}" VerticalOptions="Center" Margin="0,0,0,0"/>
+                        <Label Text=":" VerticalOptions="Center" Margin="0,0,5,0"/>
+                        <Label Text="{Binding Rating}" VerticalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+    <!-- Controls for adding new rating -->
+    <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+        <Entry x:Name="RatingEntry" Placeholder="Enter rating" Keyboard="Numeric" WidthRequest="200" Text="{Binding Rating, Mode=TwoWay}" Margin="0,0,10,0"/>
+        <Entry x:Name="DescriptionEntry" Placeholder="Enter description" WidthRequest="200" Text="{Binding Description, Mode=TwoWay}" Margin="0,0,10,0"/>
+        <Button Text="Add Rating" Clicked="OnAddRatingClicked" Margin="0,0,10,0"/>
+        <Button Text="Edit Rating" IsVisible="{Binding EditButtonVisible}" Clicked="OnEditRatingClicked" Margin="0,0,10,0"/>
+        <Button Text="Save Rating" IsVisible="{Binding EditButtonVisible}" Clicked="OnSaveEditRatingClicked" Margin="0,0,10,0"/>
+        <Button Text="Delete Rating" IsVisible="{Binding EditButtonVisible}" Clicked="OnDeleteRatingClicked" Margin="0,0,10,0"/>
+    </StackLayout>
+</StackLayout>
+
+    </Grid>
+</views:ContentPageBase>

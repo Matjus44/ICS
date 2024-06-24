@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views1:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views1="clr-namespace:ICS.App.Views"
+             xmlns:students="clr-namespace:ICS.App.ViewModels.Students"
+             x:Class="ICS.App.Views.Students.StudentsDetailPage"
+             x:DataType="students:StudentsViewDetailModel"
+             Title="Students">
+    
+    <Grid ColumnSpacing="10" Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="CenterAndExpand">
+                <Image WidthRequest="200" HeightRequest="200"
+                       HorizontalOptions="Center"
+                       Aspect="AspectFill">
+                    <Image.Source>
+                        <UriImageSource Uri="{Binding SelectedStudent.PhotoUri, Mode=OneWay}" CachingEnabled="true"/>
+                    </Image.Source>
+                </Image>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="Name:" FontSize="16"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="5" HorizontalOptions="CenterAndExpand">
+                    <Label Text="{Binding SelectedStudent.FirstName, Mode=OneWay}" FontSize="24" FontAttributes="Bold"/>
+                    <Label Text="{Binding SelectedStudent.LastName, Mode=OneWay}" FontSize="24" FontAttributes="Bold"/>
+                </HorizontalStackLayout>
+        
+                <Label Text="Personal Number:" FontSize="16" HorizontalOptions="Center"/>
+                <Label Text="{Binding SelectedStudent.Id, Mode=OneWay}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+                
+                <Button Text="Edit student" Clicked="EditStudentClicked"/>
+                <Button Text="Delete student" Clicked="DeleteStudentClicked"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+    
+</views1:ContentPageBase>

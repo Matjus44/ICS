@@ -1,0 +1,91 @@
+is_global = true
+build_property.TargetFramework = net8.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.19041.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ICS.App
+build_property.ProjectDir = C:\Users\mates\RiderProjects\project\src\ICS.App\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Shells/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Shells.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = Shells\AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = Shells\AppShell.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Views/Activities/ActivitiesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Views.Activities.ActivitiesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Activities\ActivitiesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Activities\ActivitiesPage.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Views/ContentPageBase.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Views.ContentPageBase.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContentPageBase.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContentPageBase.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Views/Schedule/SchedulePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Views.Schedule.SchedulePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Schedule\SchedulePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Schedule\SchedulePage.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Views/Students/StudentsCreatePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Views.Students.StudentsCreatePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Students\StudentsCreatePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Students\StudentsCreatePage.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Views/Students/StudentsDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Views.Students.StudentsDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Students\StudentsDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Students\StudentsDetailPage.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Views/Students/StudentsEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Views.Students.StudentsEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Students\StudentsEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Students\StudentsEditPage.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Views/Students/StudentsListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Views.Students.StudentsListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Students\StudentsListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Students\StudentsListPage.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Views/Subjects/SubjectsEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Views.Subjects.SubjectsEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Subjects\SubjectsEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Subjects\SubjectsEditPage.xaml
+
+[C:/Users/mates/RiderProjects/project/src/ICS.App/Views/Subjects/SubjectsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ICS.App.Views.Subjects.SubjectsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Subjects\SubjectsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Subjects\SubjectsPage.xaml
